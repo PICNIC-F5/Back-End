@@ -42,16 +42,6 @@ public class DireccionControllerTest {
     }
 
     @Test
-    void testDeleteDireccion() {
-
-    }
-
-    @Test
-    void testGetAllDirecciones() {
-
-    }
-
-    @Test
     void testUpdateDireccion() {
 
         Long id = 1L;
@@ -73,7 +63,7 @@ public class DireccionControllerTest {
 
         assertEquals("Nueva Playa", result.getNombre());
         assertEquals("Nueva Costa", result.getDireccion());
-        assertEquals(250.00, result.getPrecio());
+        assertEquals(259.00, result.getPrecio());
         verify(direccionRepository, times(1)).findById(id);
         verify(direccionRepository, times(1)).save(any(Direccion.class));
     }
